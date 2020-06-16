@@ -4,13 +4,18 @@
 
 import unittest
 
-from sample.simple import add_one
+from hangman.hangman import print_hanged_man
 
 
 class TestSimple(unittest.TestCase):
 
-    def test_add_one(self):
-        self.assertEqual(add_one(5), 6)
+	def test_print_hanged_man(self):
+		from io import StringIO
+
+		out = StringIO()
+		print_hanged_man(9,out)
+		output= out.getvalue()
+		self.assertEqual(output, "9 turns left\n  --------  \n")
 
 
 if __name__ == '__main__':

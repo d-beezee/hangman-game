@@ -1,5 +1,20 @@
 # A sample Python project
 
+## Install
+```
+python3 setup.py sdist bdist_wheel
+pip3 install dist/hangman*
+```
+
+## Test
+
+```
+python3 tests/test_simple.py
+```
+
+## Packaging
+
+
 ![Python Logo](https://www.python.org/static/community_logos/python-logo.png "Sample inline image")
 
 A sample project that exists as an aid to the [Python Packaging User
